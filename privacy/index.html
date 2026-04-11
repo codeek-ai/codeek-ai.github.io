@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Privacy Policies | Codeek Apps</title>
+    <meta
+      name="description"
+      content="Privacy policy hub for Codeek Apps, including Math Sprint, Codeek Camera, Codeek Map, and QR and Barcode."
+    >
+    <style>
+      :root {
+        --bg: #f6f4ec;
+        --surface: #ffffff;
+        --ink: #17382d;
+        --ink-soft: #4d6559;
+        --primary: #0e8a6a;
+        --line: rgba(23, 56, 45, 0.12);
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", system-ui, sans-serif;
+        color: var(--ink);
+        background: linear-gradient(180deg, #fbfaf4 0%, var(--bg) 100%);
+      }
+      a { color: var(--primary); }
+      .wrap { width: min(960px, calc(100% - 32px)); margin: 0 auto; padding: 28px 0 56px; }
+      .hero, .card {
+        padding: 28px;
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        background: rgba(255,255,255,0.92);
+      }
+      .hero {
+        background: linear-gradient(135deg, rgba(14,138,106,0.96), rgba(10,104,79,0.98));
+        color: #fff;
+      }
+      h1, h2, p { margin: 0; }
+      h1 { margin-top: 14px; font-size: clamp(2.2rem, 5vw, 4rem); }
+      .hero p { margin-top: 14px; line-height: 1.7; color: rgba(255,255,255,0.92); }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 20px;
+      }
+      .card p { margin-top: 10px; color: var(--ink-soft); line-height: 1.7; }
+      .card a { display: inline-flex; margin-top: 12px; font-weight: 700; text-decoration: none; }
+      @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <h1>Privacy Policies</h1>
+        <p>Official privacy policy pages for the current Codeek app portfolio.</p>
+      </section>
+      <section class="grid">
+        <article class="card">
+          <h2>Math Sprint</h2>
+          <p>Offline-first arithmetic and memory practice privacy policy.</p>
+          <a href="/math-sprint/privacy-policy/">Open policy</a>
+        </article>
+        <article class="card">
+          <h2>Codeek Camera</h2>
+          <p>Camera, location, and media access policy for photo capture features.</p>
+          <a href="/codeek-camera/privacy-policy/">Open policy</a>
+        </article>
+        <article class="card">
+          <h2>Codeek Map</h2>
+          <p>Location, map search, photos, and export data handling policy.</p>
+          <a href="/codeek-map/privacy-policy/">Open policy</a>
+        </article>
+        <article class="card">
+          <h2>QR and Barcode</h2>
+          <p>Scanner history, permissions, and on-device data policy.</p>
+          <a href="/qr-and-barcode/privacy-policy/">Open policy</a>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Codeek Map | Codeek Apps</title>
+    <meta
+      name="description"
+      content="Codeek Map is a map tool for saving places, adding photos, drawing routes, and exporting map data."
+    >
+    <style>
+      :root {
+        --bg: #eef3ef;
+        --surface: #ffffff;
+        --ink: #193229;
+        --ink-soft: #50655c;
+        --accent: #ff6b57;
+        --route: #2b7fff;
+        --green: #2f9e7c;
+        --line: rgba(25, 50, 41, 0.12);
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", system-ui, sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top right, rgba(43, 127, 255, 0.12), transparent 26%),
+          radial-gradient(circle at top left, rgba(255, 107, 87, 0.12), transparent 22%),
+          linear-gradient(180deg, #f7faf7 0%, var(--bg) 100%);
+      }
+      a { color: var(--route); }
+      .wrap { width: min(980px, calc(100% - 32px)); margin: 0 auto; padding: 28px 0 56px; }
+      .hero {
+        padding: 32px;
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: linear-gradient(135deg, rgba(47, 158, 124, 0.96), rgba(43, 127, 255, 0.92));
+        color: #fff;
+      }
+      .badge {
+        display: inline-block;
+        padding: 0.4rem 0.75rem;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.16);
+        font-weight: 700;
+      }
+      h1, h2, p { margin: 0; }
+      h1 { margin-top: 18px; font-size: clamp(2.2rem, 5vw, 4rem); }
+      .hero p { margin-top: 16px; max-width: 720px; line-height: 1.75; color: rgba(255,255,255,0.92); }
+      .grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 20px;
+        margin-top: 20px;
+      }
+      .card {
+        padding: 26px;
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        background: rgba(255,255,255,0.92);
+      }
+      .card h2 { margin-bottom: 12px; }
+      .card p, .card li { color: var(--ink-soft); line-height: 1.7; }
+      ul { padding-left: 1.1rem; margin: 12px 0 0; }
+      .cta { margin-top: 16px; }
+      .cta a + a { margin-left: 12px; }
+      .cta a {
+        display: inline-flex;
+        padding: 0.85rem 1rem;
+        border-radius: 999px;
+        background: var(--accent);
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      footer { margin-top: 24px; color: var(--ink-soft); }
+      @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <div class="badge">Map Tool</div>
+        <h1>Codeek Map</h1>
+        <p>
+          Codeek Map is a practical map tool for saving important places, organizing route ideas,
+          and keeping field notes close to the map in a clean, map-first workflow.
+        </p>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h2>What It Does</h2>
+          <p>
+            The app helps users capture locations, attach notes and photos, draw routes, outline
+            areas, and export useful map data when needed.
+          </p>
+          <ul>
+            <li>Save markers with titles, notes, and coordinates</li>
+            <li>Attach photos to saved markers</li>
+            <li>Draw routes with waypoint support</li>
+            <li>Outline areas directly on the map</li>
+            <li>Search by place name, address, or coordinates</li>
+            <li>Export marker and route data in CSV or JSON</li>
+          </ul>
+        </article>
+
+        <aside class="card">
+          <h2>App Details</h2>
+          <ul>
+            <li>Local-first storage</li>
+            <li>Built for planning, scouting, and field notes</li>
+            <li>No account required for core features</li>
+            <li>Part of the Codeek app portfolio</li>
+          </ul>
+          <div class="cta">
+            <a href="/codeek-map/privacy-policy/">Privacy Policy</a>
+            <a href="/">Back to all apps</a>
+          </div>
+        </aside>
+      </section>
+
+      <footer>
+        Official app page for Codeek Map on the Codeek Apps developer website.
+      </footer>
+    </main>
+  </body>
+</html>

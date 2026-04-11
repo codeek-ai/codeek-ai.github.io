@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QR and Barcode | Codeek Apps</title>
+    <meta
+      name="description"
+      content="QR and Barcode is a fast scanner app with smart actions, local history, and QR code creation."
+    >
+    <style>
+      :root {
+        --bg: #f6f4ec;
+        --surface: #ffffff;
+        --ink: #11212d;
+        --ink-soft: #55636c;
+        --teal: #0e8b7d;
+        --gold: #f4b942;
+        --coral: #ff6b57;
+        --line: rgba(17, 33, 45, 0.12);
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", system-ui, sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(14, 139, 125, 0.14), transparent 24%),
+          radial-gradient(circle at top right, rgba(255, 107, 87, 0.14), transparent 22%),
+          linear-gradient(180deg, #fbfaf4 0%, var(--bg) 100%);
+      }
+      a { color: var(--teal); }
+      .wrap { width: min(980px, calc(100% - 32px)); margin: 0 auto; padding: 28px 0 56px; }
+      .hero {
+        padding: 32px;
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: linear-gradient(135deg, rgba(14, 139, 125, 0.96), rgba(17, 33, 45, 0.96));
+        color: #fff;
+      }
+      .badge {
+        display: inline-block;
+        padding: 0.4rem 0.75rem;
+        border-radius: 999px;
+        background: rgba(244, 185, 66, 0.16);
+        color: var(--gold);
+        font-weight: 700;
+      }
+      h1, h2, p { margin: 0; }
+      h1 { margin-top: 18px; font-size: clamp(2.2rem, 5vw, 4rem); }
+      .hero p { margin-top: 16px; max-width: 720px; line-height: 1.75; color: rgba(255,255,255,0.92); }
+      .grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 20px;
+        margin-top: 20px;
+      }
+      .card {
+        padding: 26px;
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        background: rgba(255,255,255,0.92);
+      }
+      .card h2 { margin-bottom: 12px; }
+      .card p, .card li { color: var(--ink-soft); line-height: 1.7; }
+      ul { padding-left: 1.1rem; margin: 12px 0 0; }
+      .cta { margin-top: 16px; }
+      .cta a + a { margin-left: 12px; }
+      .cta a {
+        display: inline-flex;
+        padding: 0.85rem 1rem;
+        border-radius: 999px;
+        background: var(--coral);
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      footer { margin-top: 24px; color: var(--ink-soft); }
+      @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <div class="badge">Scanner Utility</div>
+        <h1>QR and Barcode</h1>
+        <p>
+          QR and Barcode is a fast scanner app built for everyday use. It helps users scan codes,
+          understand the content instantly, take the next action quickly, and create their own QR codes.
+        </p>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h2>What It Does</h2>
+          <p>
+            The app keeps scanning simple, fast, and privacy-focused while supporting common real-world
+            workflows such as Wi-Fi joining, contact saving, link opening, and QR creation.
+          </p>
+          <ul>
+            <li>Scans QR codes and major barcode formats</li>
+            <li>Detects links, Wi-Fi, contacts, phone, email, SMS, maps, and plain text</li>
+            <li>Lets users open, copy, or share scan results instantly</li>
+            <li>Saves useful scans to local history with search and filters</li>
+            <li>Creates QR codes for common use cases from guided forms</li>
+          </ul>
+        </article>
+
+        <aside class="card">
+          <h2>App Details</h2>
+          <ul>
+            <li>Privacy-first local storage</li>
+            <li>No account required for core features</li>
+            <li>Designed for quick everyday actions</li>
+            <li>Part of the Codeek app portfolio</li>
+          </ul>
+          <div class="cta">
+            <a href="/qr-and-barcode/privacy-policy/">Privacy Policy</a>
+            <a href="/">Back to all apps</a>
+          </div>
+        </aside>
+      </section>
+
+      <footer>
+        Official app page for QR and Barcode on the Codeek Apps developer website.
+      </footer>
+    </main>
+  </body>
+</html>
