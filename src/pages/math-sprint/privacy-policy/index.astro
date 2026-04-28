@@ -1,0 +1,64 @@
+---
+import PrivacyDoc from '@/layouts/PrivacyDoc.astro';
+import { apps } from '@/data/apps';
+
+const app = apps.find((a) => a.id === 'math-sprint')!;
+---
+
+<PrivacyDoc app={app}>
+  <p>Math Sprint is a local, offline-first practice app for math and memory.</p>
+
+  <h2>Information We Collect</h2>
+  <p>Math Sprint does not collect personal information from users.</p>
+  <p>
+    Math Sprint does not require account creation and does not ask users to provide name, email
+    address, phone number, location, contacts, photos, or payment information.
+  </p>
+
+  <h2>Data Stored on the Device</h2>
+  <p>
+    Math Sprint stores limited app data only on the user's device so the app can work offline and
+    show personal progress features.
+  </p>
+  <ul>
+    <li>App settings such as language, haptics, sound, and high contrast mode preferences</li>
+    <li>Game mode and difficulty</li>
+    <li>Score, correct answer count, total question count, elapsed time, and bonus points</li>
+    <li>Date and time of play</li>
+    <li>Daily challenge completion history and streak state</li>
+    <li>Local analytics event logs used for product debugging and future local analysis</li>
+  </ul>
+  <p>This information is stored locally on the device and is not sent to our servers.</p>
+
+  <h2>Data Sharing</h2>
+  <p>Math Sprint does not sell, share, or transfer user data to third parties.</p>
+
+  <h2>Internet and Network Use</h2>
+  <p>
+    Math Sprint is designed to work without creating user accounts or sending gameplay data to a
+    backend service. At this time, Math Sprint does not transmit personal data to us or to third
+    parties.
+  </p>
+
+  <h2>Children</h2>
+  <p>
+    Math Sprint is intended for general practice gameplay and may be used by children. We do not
+    knowingly collect personal information from children.
+  </p>
+
+  <h2>Security</h2>
+  <p>
+    Because gameplay history is stored locally on the device, users can clear app data or uninstall
+    the app to remove that stored data.
+  </p>
+
+  <h2>Changes to This Policy</h2>
+  <p>
+    If this privacy policy changes, the updated version will be posted with a new effective date.
+  </p>
+
+  <h2>Contact</h2>
+  <p>Developer: Enes</p>
+  <p>Package name: <code>com.enesk6u.mathsprint</code></p>
+  <p>Contact email: <code>enesk6u@gmail.com</code></p>
+</PrivacyDoc>

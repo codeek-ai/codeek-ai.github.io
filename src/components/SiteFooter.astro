@@ -1,0 +1,124 @@
+---
+import { site } from '@/data/site';
+import { apps } from '@/data/apps';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-name">{site.name}</span>
+      <p>Official developer website for our mobile app portfolio.</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="App links">
+      <strong>Apps</strong>
+      {apps.map((app) => <a href={`/${app.id}/`}>{app.name}</a>)}
+    </nav>
+
+    <nav class="footer-nav" aria-label="Legal links">
+      <strong>Privacy</strong>
+      <a href="/privacy/">All Privacy Policies</a>
+      {apps.map((app) => (
+        <a href={`/${app.id}/privacy-policy/`}>{app.name}</a>
+      ))}
+    </nav>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <span>© {year} {site.name}</span>
+      <a href="/app-ads.txt" class="small-link">app-ads.txt</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: 80px;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 40px;
+    width: min(1200px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 48px 0 40px;
+  }
+
+  .brand-name {
+    display: block;
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+    color: var(--color-text);
+  }
+
+  .footer-brand p {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    line-height: 1.6;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-nav strong {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--color-muted);
+    margin-bottom: 4px;
+  }
+
+  .footer-nav a {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .footer-nav a:hover {
+    color: var(--color-text);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .footer-bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: min(1200px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 20px 0;
+    font-size: 0.82rem;
+    color: var(--color-muted);
+  }
+
+  .small-link {
+    color: var(--color-muted);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .small-link:hover {
+    color: var(--color-text);
+  }
+
+  @media (max-width: 768px) {
+    .footer-inner {
+      grid-template-columns: 1fr;
+      gap: 28px;
+      padding-bottom: 28px;
+    }
+  }
+</style>

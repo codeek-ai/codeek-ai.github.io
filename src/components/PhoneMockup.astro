@@ -1,0 +1,140 @@
+---
+interface Props {
+  gradient: string;
+  label?: string;
+}
+
+const { gradient, label } = Astro.props;
+---
+
+<div class="phone-wrap">
+  <div class="phone-frame">
+    <div class="phone-notch"></div>
+    <div class="phone-screen" style={`background: ${gradient};`}>
+      <div class="screen-content">
+        {label && <span class="screen-label">{label}</span>}
+        <div class="ui-skeleton">
+          <div class="sk-bar wide"></div>
+          <div class="sk-bar medium"></div>
+          <div class="sk-row">
+            <div class="sk-card"></div>
+            <div class="sk-card"></div>
+          </div>
+          <div class="sk-bar short"></div>
+        </div>
+      </div>
+    </div>
+    <div class="phone-bar"></div>
+  </div>
+</div>
+
+<style>
+  .phone-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0;
+  }
+
+  .phone-frame {
+    width: 210px;
+    height: 420px;
+    background: #0c0f16;
+    border: 1.5px solid rgba(255, 255, 255, 0.14);
+    border-radius: 38px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow:
+      0 40px 80px -16px rgba(0, 0, 0, 0.75),
+      0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+  }
+
+  .phone-notch {
+    height: 26px;
+    background: #0c0f16;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .phone-notch::before {
+    content: '';
+    width: 68px;
+    height: 7px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+  }
+
+  .phone-screen {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px 16px;
+  }
+
+  .screen-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .screen-label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65);
+    background: rgba(255, 255, 255, 0.12);
+    padding: 0.2rem 0.5rem;
+    border-radius: 999px;
+    align-self: flex-start;
+  }
+
+  .ui-skeleton {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .sk-bar {
+    height: 9px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .sk-bar.wide { width: 85%; }
+  .sk-bar.medium { width: 60%; }
+  .sk-bar.short { width: 40%; }
+
+  .sk-row {
+    display: flex;
+    gap: 8px;
+    margin: 4px 0;
+  }
+
+  .sk-card {
+    flex: 1;
+    height: 52px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.13);
+  }
+
+  .phone-bar {
+    height: 26px;
+    background: #0c0f16;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .phone-bar::before {
+    content: '';
+    width: 52px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+  }
+</style>

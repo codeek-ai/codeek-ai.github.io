@@ -1,0 +1,98 @@
+---
+import Base from '@/layouts/Base.astro';
+import PrivacyHubCard from '@/components/PrivacyHubCard.astro';
+import { apps } from '@/data/apps';
+---
+
+<Base
+  title="Privacy Policies"
+  description="Official privacy policy pages for the Codeek Apps portfolio — Math Sprint, Codeek Camera, Codeek Map, and QR and Barcode."
+>
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <span class="eyebrow">Legal</span>
+        <h1>Privacy Policies</h1>
+        <p>Official privacy policy pages for the current Codeek app portfolio.</p>
+      </div>
+    </section>
+
+    <section class="grid-section" aria-labelledby="policies-heading">
+      <div class="section-inner">
+        <h2 id="policies-heading" class="sr-only">App policies</h2>
+        <div class="cards-grid">
+          {apps.map((app) => <PrivacyHubCard app={app} />)}
+        </div>
+      </div>
+    </section>
+  </main>
+</Base>
+
+<style>
+  .hero {
+    padding: 72px 0 64px;
+    border-bottom: 1px solid var(--color-border);
+    background:
+      radial-gradient(circle at 20% 60%, rgba(14, 138, 106, 0.12) 0%, transparent 50%);
+  }
+
+  .hero-inner {
+    width: min(1200px, calc(100% - 32px));
+    margin: 0 auto;
+    max-width: 640px;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(14, 138, 106, 0.14);
+    border: 1px solid rgba(14, 138, 106, 0.3);
+    color: var(--color-teal);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    color: var(--color-text);
+    margin-bottom: 12px;
+  }
+
+  p {
+    font-size: 1rem;
+    color: var(--color-muted);
+    line-height: 1.65;
+  }
+
+  .section-inner {
+    width: min(1200px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 56px 0 80px;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  @media (max-width: 640px) {
+    .cards-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

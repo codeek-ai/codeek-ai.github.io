@@ -1,0 +1,77 @@
+---
+import type { App } from '@/data/apps';
+
+interface Props {
+  app: App;
+}
+
+const { app } = Astro.props;
+---
+
+<a href={`/${app.id}/privacy-policy/`} class="hub-card">
+  <div
+    class="card-bar"
+    style={`background: linear-gradient(90deg, ${app.gradientFrom}, ${app.gradientTo});`}
+  ></div>
+  <div class="card-content">
+    <span class="cat">{app.category}</span>
+    <h3>{app.name}</h3>
+    <p>Privacy policy for {app.name}.</p>
+    <span class="arrow">Read policy →</span>
+  </div>
+</a>
+
+<style>
+  .hub-card {
+    display: block;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .hub-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .card-bar {
+    height: 5px;
+  }
+
+  .card-content {
+    padding: 24px;
+  }
+
+  .cat {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: 8px;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  .arrow {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-teal);
+  }
+</style>

@@ -1,0 +1,108 @@
+---
+import PrivacyDoc from '@/layouts/PrivacyDoc.astro';
+import { apps } from '@/data/apps';
+
+const app = apps.find((a) => a.id === 'codeek-map')!;
+---
+
+<PrivacyDoc app={app}>
+  <p>
+    Codeek Map is a mobile map tool that lets users save markers, attach photos, draw routes and
+    areas, search places, and export selected data. This Privacy Policy explains what information
+    the app handles, how that information is used, and what choices users have.
+  </p>
+
+  <h2>Summary</h2>
+  <ul>
+    <li>Codeek Map does not require account registration</li>
+    <li>
+      Codeek Map does not include ads, analytics SDKs, or crash reporting in the current app build
+    </li>
+    <li>Most app data is stored locally on the user's device</li>
+    <li>
+      Location and photo library access are optional and used only for features the user chooses to
+      use
+    </li>
+    <li>
+      Place search sends the user's search query to the OpenStreetMap Nominatim search service so
+      results can be returned
+    </li>
+  </ul>
+
+  <h2>Information We Handle</h2>
+  <ul>
+    <li>Foreground device location for current-position and recenter features</li>
+    <li>
+      Photos selected by the user and copied into the app's local storage so they remain linked to
+      saved marker records
+    </li>
+    <li>
+      User-created map content such as markers, coordinates, notes, attached photo references,
+      routes, waypoints, area geometry, preferences, and recent searches
+    </li>
+    <li>
+      Search queries sent to <code>https://nominatim.openstreetmap.org/</code> when place or address
+      search is used
+    </li>
+  </ul>
+
+  <h2>How Information Is Used</h2>
+  <ul>
+    <li>Showing and recentering the map</li>
+    <li>Saving user-created map items</li>
+    <li>Attaching selected photos to markers</li>
+    <li>Returning place search results</li>
+    <li>Exporting map data to CSV or JSON files</li>
+    <li>Opening the device share sheet when the user chooses to share an export</li>
+  </ul>
+
+  <h2>Data Storage</h2>
+  <p>
+    Most data created in the app is stored locally on the user's device, including saved markers,
+    routes, areas, preferences, and recent searches. Marker photos selected by the user are also
+    stored in the app's local file storage on the device.
+  </p>
+
+  <h2>Data Sharing</h2>
+  <p>
+    Codeek Map does not sell personal information and does not share user data with advertising
+    networks. Data may be shared only when search queries are sent to OpenStreetMap Nominatim or
+    when export files are shared because the user explicitly chooses to share them.
+  </p>
+
+  <h2>Permissions</h2>
+  <ul>
+    <li>
+      <code>ACCESS_FINE_LOCATION</code> and <code>ACCESS_COARSE_LOCATION</code> for current-location
+      features
+    </li>
+    <li>
+      <code>READ_MEDIA_IMAGES</code> or <code>READ_EXTERNAL_STORAGE</code> to let the user pick
+      photos from the device library
+    </li>
+  </ul>
+
+  <h2>Data Retention and Deletion</h2>
+  <p>
+    Because most app data is stored locally on the device, users can remove data by deleting saved
+    items inside the app, clearing app storage through device settings, or uninstalling the app.
+  </p>
+
+  <h2>Children's Privacy</h2>
+  <p>Codeek Map is not intended to knowingly collect personal information from children.</p>
+
+  <h2>Security</h2>
+  <p>
+    No method of electronic storage or transmission is completely secure, so absolute security
+    cannot be guaranteed.
+  </p>
+
+  <h2>Changes to This Privacy Policy</h2>
+  <p>
+    This Privacy Policy may be updated from time to time. The updated version should be published
+    with a revised effective date.
+  </p>
+
+  <h2>Contact</h2>
+  <p>Contact email: <code>enesk6u@gmail.com</code></p>
+</PrivacyDoc>

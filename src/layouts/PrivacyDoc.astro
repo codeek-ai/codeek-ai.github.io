@@ -1,0 +1,149 @@
+---
+import Base from './Base.astro';
+import type { App } from '@/data/apps';
+
+interface Props {
+  app: App;
+}
+
+const { app } = Astro.props;
+---
+
+<Base
+  title={`${app.name} Privacy Policy`}
+  description={`Privacy policy for ${app.name}. Last updated: ${app.privacyDate}.`}
+>
+  <main class="doc-wrap">
+    <header
+      class="doc-hero"
+      style={`background: linear-gradient(135deg, ${app.gradientFrom}, ${app.gradientTo});`}
+    >
+      <a href={`/${app.id}/`} class="back-link">← {app.name}</a>
+      <h1>{app.name} Privacy Policy</h1>
+      <p class="updated">Last updated: {app.privacyDate}</p>
+      <nav class="doc-nav" aria-label="Policy navigation">
+        <a href={`/${app.id}/`}>App page</a>
+        <a href="/privacy/">All policies</a>
+      </nav>
+    </header>
+
+    <div class="doc-body">
+      <slot />
+    </div>
+  </main>
+</Base>
+
+<style>
+  .doc-wrap {
+    width: min(860px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 28px 0 80px;
+  }
+
+  .doc-hero {
+    padding: 36px 36px 28px;
+    border-radius: var(--radius-card);
+    color: #fff;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.15s;
+  }
+  .back-link:hover {
+    color: #fff;
+  }
+
+  h1 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+
+  .updated {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.875rem;
+    margin-bottom: 0;
+  }
+
+  .doc-nav {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .doc-nav a {
+    display: inline-block;
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: background 0.15s;
+  }
+  .doc-nav a:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  .doc-body {
+    margin-top: 20px;
+    padding: 36px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+  }
+
+  .doc-body :global(p),
+  .doc-body :global(li) {
+    color: var(--color-muted);
+    line-height: 1.8;
+    margin-top: 10px;
+  }
+
+  .doc-body :global(h2) {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: -0.01em;
+    margin-top: 28px;
+    margin-bottom: 0;
+  }
+
+  .doc-body :global(h2:first-child) {
+    margin-top: 0;
+  }
+
+  .doc-body :global(ul) {
+    padding-left: 1.2rem;
+    margin: 0;
+  }
+
+  .doc-body :global(code) {
+    padding: 0.15rem 0.4rem;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.07);
+    font-size: 0.875em;
+    font-family: ui-monospace, monospace;
+    color: var(--color-text);
+  }
+
+  @media (max-width: 600px) {
+    .doc-hero {
+      padding: 24px 20px;
+    }
+    .doc-body {
+      padding: 24px 20px;
+    }
+  }
+</style>

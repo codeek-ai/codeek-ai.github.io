@@ -1,0 +1,8 @@
+---
+import AppPage from '@/layouts/AppPage.astro';
+import { apps } from '@/data/apps';
+
+const app = apps.find((a) => a.id === 'math-sprint')!;
+---
+
+<AppPage app={app} />
