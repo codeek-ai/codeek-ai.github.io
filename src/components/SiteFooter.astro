@@ -24,6 +24,11 @@ const year = new Date().getFullYear();
         <a href={`/${app.id}/privacy-policy/`}>{app.name}</a>
       ))}
     </nav>
+
+    <nav class="footer-nav" aria-label="Store links">
+      <strong>Store</strong>
+      <a href={site.googlePlayDeveloperUrl} target="_blank" rel="noopener noreferrer">Google Play developer page</a>
+    </nav>
   </div>
 
   <div class="footer-bottom">
@@ -42,7 +47,7 @@ const year = new Date().getFullYear();
 
   .footer-inner {
     display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
     gap: 40px;
     width: min(1200px, calc(100% - 32px));
     margin: 0 auto;

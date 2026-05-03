@@ -10,6 +10,7 @@ const jsonLd = {
   name: site.name,
   url: site.url,
   description: site.description,
+  sameAs: [site.googlePlayDeveloperUrl],
 };
 ---
 
@@ -28,6 +29,7 @@ const jsonLd = {
           <div class="hero-actions">
             <a href="#apps" class="btn-primary">Browse Apps</a>
             <a href="/privacy/" class="btn-ghost">Privacy Policies</a>
+            <a href={site.googlePlayDeveloperUrl} class="btn-ghost" target="_blank" rel="noopener noreferrer">Google Play</a>
           </div>
         </div>
 
@@ -75,7 +77,8 @@ const jsonLd = {
               This website is the official developer website used in Google Play
               app listings. The{' '}
               <a href="/app-ads.txt">app-ads.txt</a> file is hosted at the root
-              of this domain for AdMob verification.
+              of this domain for AdMob verification. Apps are published on the{' '}
+              <a href={site.googlePlayDeveloperUrl} target="_blank" rel="noopener noreferrer">Codeek Google Play developer page</a>.
             </p>
             <code class="url-chip">https://codeek-ai.github.io/</code>
           </div>

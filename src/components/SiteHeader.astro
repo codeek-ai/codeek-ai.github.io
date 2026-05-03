@@ -1,5 +1,6 @@
 ---
 import { apps } from '@/data/apps';
+import { site } from '@/data/site';
 ---
 
 <header class="site-header">
@@ -23,6 +24,7 @@ import { apps } from '@/data/apps';
         <a href={`/${app.id}/`} class="nav-link">{app.name}</a>
       ))}
       <a href="/privacy/" class="nav-link">Privacy</a>
+      <a href={site.googlePlayDeveloperUrl} class="nav-link store-link" target="_blank" rel="noopener noreferrer">Google Play</a>
     </nav>
 
     <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav">
@@ -35,6 +37,7 @@ import { apps } from '@/data/apps';
       <a href={`/${app.id}/`}>{app.name}</a>
     ))}
     <a href="/privacy/">Privacy</a>
+    <a href={site.googlePlayDeveloperUrl} target="_blank" rel="noopener noreferrer">Google Play</a>
   </nav>
 </header>
 
@@ -103,6 +106,15 @@ import { apps } from '@/data/apps';
   .nav-link:hover {
     color: var(--color-text);
     background: rgba(255, 255, 255, 0.06);
+  }
+
+  .store-link {
+    border: 1px solid rgba(14, 138, 106, 0.35);
+    color: var(--color-text);
+    background: rgba(14, 138, 106, 0.12);
+  }
+  .store-link:hover {
+    background: rgba(14, 138, 106, 0.2);
   }
 
   .nav-toggle {

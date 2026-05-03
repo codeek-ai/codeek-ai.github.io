@@ -5,4 +5,5 @@ export const site = {
   description:
     'Official developer website for Codeek Apps — Math Sprint, Codeek Camera, Codeek Map, and QR and Barcode.',
   email: 'enesk6u@gmail.com',
+  googlePlayDeveloperUrl: 'https://play.google.com/store/apps/developer?id=codeek',
 } as const;
