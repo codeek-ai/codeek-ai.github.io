@@ -26,6 +26,7 @@ const generatedPaths = [
   'robots.txt',
   'sitemap-0.xml',
   'sitemap-index.xml',
+  'tendly',
 ];
 
 if (!fs.existsSync(path.join(docsDir, 'index.html'))) {

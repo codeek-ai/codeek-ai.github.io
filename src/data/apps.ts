@@ -17,6 +17,35 @@ export interface App {
 
 export const apps: App[] = [
   {
+    id: 'tendly',
+    name: 'Tendly',
+    tagline: 'Care tasks, routines & reminders',
+    description:
+      'Care task tracker for recurring routines around plants, pets, medicines, and custom reminders. Helps users create tasks, track due dates, complete care actions, attach notes and photos, and review completion history.',
+    category: 'Care Reminder',
+    gradientFrom: '#16a79c',
+    gradientTo: '#f2a35e',
+    accentColor: '#16a79c',
+    screenGradient: 'linear-gradient(145deg, #16a79c 0%, #f2a35e 100%)',
+    features: [
+      'Create recurring care tasks for plants, pets, medicines, and custom routines',
+      'Track overdue, due today, and upcoming tasks',
+      'Attach completion notes and optional photos',
+      'Review task history, calendar views, and basic statistics',
+      'Use predefined care plans for common routines',
+    ],
+    details: [
+      'Local-first storage',
+      'No account required',
+      'Built for everyday care routines',
+      'Part of the Codeek portfolio',
+    ],
+    privacyDate: 'May 16, 2026',
+    packageName: 'com.codeek.tendly',
+    metaDescription:
+      'Tendly is a care task and reminder app for recurring routines, due dates, completion notes, photos, history, and predefined care plans.',
+  },
+  {
     id: 'math-sprint',
     name: 'Math Sprint',
     tagline: 'Fast offline arithmetic & memory practice',
